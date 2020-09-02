@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<form th:action="@{/departs/saveOrUpdate}" method="post" th:object="${depart}">
+		<div th:if="@{id} > 0">
+			<input th:field="*{id}" placeholder="Department ID"> <br/>
+		</div>
+		
+		<input type="text" th:field="*{name}" placeholder="Nameaaaaaas"><br>
+
+		<input type="submit" value="Add">
+	</form>
+</body>
+</html>
